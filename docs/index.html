@@ -268,11 +268,54 @@
       color: #ffffff;
     }
     .hero-sub {
-      margin: 0 0 22px;
+      margin: 0 0 18px;
       font-size: 15px;
       color: #cbd5e1;
       max-width: 72ch;
     }
+    .hero-author {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-left: 3px solid #5eead4;
+      border-radius: 10px;
+      padding: 13px 16px;
+      margin-bottom: 20px;
+    }
+    .author-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #5eead4;
+      margin-bottom: 4px;
+    }
+    .author-name {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .author-affs {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-bottom: 8px;
+    }
+    .author-aff {
+      font-size: 13px;
+      color: #e2e8f0;
+      line-height: 1.45;
+    }
+    .author-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+    .author-links a { color: #93c5fd; font-weight: 500; }
+    .author-links a:hover { color: #ffffff; }
+    .author-sep { color: #64748b; }
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
@@ -549,14 +592,59 @@
 
     .site-footer {
       margin-top: 48px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
+      padding: 24px 26px;
+      border-top: 2px solid var(--border);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--navy);
+      border-radius: var(--radius);
       color: var(--text-muted);
       font-size: 13px;
+      box-shadow: var(--shadow-sm);
+    }
+    .footer-grid {
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-author-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--teal);
+      margin-bottom: 5px;
+    }
+    .footer-author-name {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--text-strong);
+      margin-bottom: 4px;
+    }
+    .footer-author-aff {
+      font-size: 12.8px;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .footer-author-links {
+      margin-top: 6px;
+      display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      font-size: 12.8px;
+    }
+    .footer-note-box {
+      max-width: 360px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .footer-note {
+      font-size: 12.5px;
+      line-height: 1.55;
+      color: var(--text-muted);
     }
 
     @media (max-width: 960px) {
@@ -813,6 +901,18 @@
               <div class="hero-badge">Practical Research Handbook &amp; Reproducible Toolkit  •  English Edition</div>
               <h1 class="hero-title">Local Language Models for<br>Ethical Research</h1>
               <p class="hero-sub">A complete, end-to-end practical guide to installing, securing, and running offline AI models (Whisper, Gemma 4/3, Qwen 2.5 Coder) via Ollama, Apple Silicon MLX, Antigravity Guardrails, Dual-Agent Qualitative Pipelines, and the Offline Bilingual Live Teleprompter.</p>
+              
+              <div class="hero-author">
+                <div class="author-label">PREPARED BY</div>
+                <div class="author-name">Mateus R Oliveira （陌・Machi）  /  オリベイラ・マチ</div>
+                <div class="author-affs"><div class="author-aff">The University of Tokyo — Graduate School of Interdisciplinary Information Studies, PhD Candidate</div><div class="author-aff">東京大学大学院 学際情報学府 博士課程</div></div>
+                <div class="author-links">
+                  <a href="mailto:mateus@g.ecc.u-tokyo.ac.jp">✉ mateus@g.ecc.u-tokyo.ac.jp</a>
+                  <span class="author-sep">•</span>
+                  <a href="https://borderlining.substack.com/" target="_blank" rel="noopener noreferrer">🔗 https://borderlining.substack.com/</a>
+                </div>
+              </div>
+            
               <div class="hero-actions">
                 <a class="btn btn-primary" href="downloads/Local_LLM_Research_Toolkit_Guide_EN.docx" download>
                   <span class="btn-icon">↓</span> Download Word (EN)
@@ -1776,8 +1876,27 @@ ollama run gemma4:latest &quot;Reply with &#x27;Offline ready!&#x27; in 3 words.
             
 </section>
         <footer class="site-footer">
-          <span>100% Local AI Research Toolkit — Privacy-First Documentation</span>
-          <span><a href="#en-top">Back to top ↑</a></span>
+          <div class="footer-grid">
+            <div>
+              <div class="footer-author-title">Prepared by</div>
+              <div class="footer-author-name">Mateus R Oliveira （陌・Machi） / オリベイラ・マチ</div>
+              <div class="footer-author-aff">
+                The University of Tokyo — Graduate School of Interdisciplinary Information Studies, PhD Candidate<br />
+                東京大学大学院 学際情報学府 博士課程
+              </div>
+              <div class="footer-author-links">
+                <a href="mailto:mateus@g.ecc.u-tokyo.ac.jp">✉ mateus@g.ecc.u-tokyo.ac.jp</a>
+                <span>•</span>
+                <a href="https://borderlining.substack.com/" target="_blank" rel="noopener noreferrer">🔗 https://borderlining.substack.com/</a>
+              </div>
+            </div>
+            <div class="footer-note-box">
+              <div class="footer-note">
+                <strong>Note:</strong> This open handbook documents ethical, 100% offline local language model practices for qualitative research. Feel free to adapt and share with attribution.
+              </div>
+              <div><a href="#en-top">Back to top ↑</a></div>
+            </div>
+          </div>
         </footer>
       </article>
 
@@ -1787,6 +1906,18 @@ ollama run gemma4:latest &quot;Reply with &#x27;Offline ready!&#x27; in 3 words.
               <div class="hero-badge">実践研究ハンドブック＆再現可能ツールキット  •  日本語版</div>
               <h1 class="hero-title">研究倫理のための<br>ローカル言語モデル実践ガイド</h1>
               <p class="hero-sub">Ollama、Apple Silicon MLX、Antigravityガードレール、デュアルエージェント質的分析パイプライン、およびオフライン日英リアルタイム・テレプロンプターを用いて、機密性の高い研究データを100%オフラインで安全に処理するための導入・運用・スクリプト完全マニュアル。</p>
+              
+              <div class="hero-author">
+                <div class="author-label">作成者  /  PREPARED BY</div>
+                <div class="author-name">Mateus R Oliveira （陌・Machi）  /  オリベイラ・マチ</div>
+                <div class="author-affs"><div class="author-aff">東京大学大学院 学際情報学府 博士課程</div><div class="author-aff">The University of Tokyo — Graduate School of Interdisciplinary Information Studies, PhD Candidate</div></div>
+                <div class="author-links">
+                  <a href="mailto:mateus@g.ecc.u-tokyo.ac.jp">✉ mateus@g.ecc.u-tokyo.ac.jp</a>
+                  <span class="author-sep">•</span>
+                  <a href="https://borderlining.substack.com/" target="_blank" rel="noopener noreferrer">🔗 https://borderlining.substack.com/</a>
+                </div>
+              </div>
+            
               <div class="hero-actions">
                 <a class="btn btn-primary" href="downloads/Local_LLM_Research_Toolkit_Guide_EN.docx" download>
                   <span class="btn-icon">↓</span> Word版をダウンロード (EN)
@@ -2751,8 +2882,27 @@ ollama run gemma4:latest &quot;「オフライン準備完了！」とだけ答�
             
 </section>
         <footer class="site-footer">
-          <span>100%ローカルAI研究ツールキット — 研究倫理・プライバシー最優先ガイド</span>
-          <span><a href="#ja-top">ページ先頭へ戻る ↑</a></span>
+          <div class="footer-grid">
+            <div>
+              <div class="footer-author-title">作成者 / Prepared by</div>
+              <div class="footer-author-name">オリベイラ・マチ / Mateus R Oliveira （陌・Machi）</div>
+              <div class="footer-author-aff">
+                東京大学大学院 学際情報学府 博士課程<br />
+                The University of Tokyo — Graduate School of Interdisciplinary Information Studies, PhD Candidate
+              </div>
+              <div class="footer-author-links">
+                <a href="mailto:mateus@g.ecc.u-tokyo.ac.jp">✉ mateus@g.ecc.u-tokyo.ac.jp</a>
+                <span>•</span>
+                <a href="https://borderlining.substack.com/" target="_blank" rel="noopener noreferrer">🔗 https://borderlining.substack.com/</a>
+              </div>
+            </div>
+            <div class="footer-note-box">
+              <div class="footer-note">
+                <strong>注記：</strong>本ガイドは、研究倫理とプライバシー保護に配慮した100%オフラインのローカル言語モデル実践手法をまとめたものです。出典を明記のうえ、研究・教育目的でご活用ください。
+              </div>
+              <div><a href="#ja-top">ページ先頭へ戻る ↑</a></div>
+            </div>
+          </div>
         </footer>
       </article>
     </main>
