@@ -1,0 +1,34 @@
+# Strict Local Research Data Privacy Blocklist
+data/
+Transcriptions/
+transcripts/
+reports/
+private/
+private_data/
+output/
+
+# Confidential Audio / Video / Transcripts / Spreadsheets
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+*.aac
+*.mp4
+*.mov
+*.xlsx
+*.xls
+*.xlsm
+*.csv
+*.tsv
+*.srt
+*.vtt
+*.txt
+
+# Python & OS clutter
+.venv/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
