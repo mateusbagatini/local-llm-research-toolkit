@@ -25,6 +25,10 @@ output/
 *.vtt
 *.txt
 
+# Explicitly allow the public workshop demo example outputs inside docs/examples/
+!docs/examples/
+!docs/examples/**
+
 # Python & OS clutter
 .venv/
 venv/

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" width="360" height="200">
+  <rect width="360" height="200" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="14" y="12" width="332" height="44" rx="8" fill="#1e293b"/>
+  <rect x="14" y="12" width="5" height="44" rx="2" fill="#14b8a6"/>
+  <text x="28" y="30" fill="#5eead4" font-family="Helvetica Neue,sans-serif" font-size="8.5" font-weight="700">DUAL-AGENT UX TRANSCRIPT  •  GEMMA + QWEN</text>
+  <text x="28" y="46" fill="#ffffff" font-family="Helvetica Neue,sans-serif" font-size="12" font-weight="700">Interview Trends — Marta (London)</text>
+  <!-- Top 3 Themes mini cards -->
+  <rect x="14" y="64" width="106" height="32" rx="6" fill="#eef2ff" stroke="#c7d2fe"/>
+  <rect x="20" y="71" width="46" height="6" rx="2" fill="#4338ca"/>
+  <rect x="20" y="82" width="88" height="5" rx="2" fill="#94a3b8"/>
+  <rect x="127" y="64" width="106" height="32" rx="6" fill="#f0fdfa" stroke="#99f6e4"/>
+  <rect x="133" y="71" width="52" height="6" rx="2" fill="#0d9488"/>
+  <rect x="133" y="82" width="88" height="5" rx="2" fill="#94a3b8"/>
+  <rect x="240" y="64" width="106" height="32" rx="6" fill="#fffbeb" stroke="#fde68a"/>
+  <rect x="246" y="71" width="48" height="6" rx="2" fill="#d97706"/>
+  <rect x="246" y="82" width="88" height="5" rx="2" fill="#94a3b8"/>
+  <!-- 2-Col Speaker Turn Card 1 (Interviewer) -->
+  <rect x="14" y="104" width="74" height="30" rx="5" fill="#eef2ff" stroke="#cbd5e1"/>
+  <rect x="14" y="104" width="4" height="30" rx="2" fill="#4f46e5"/>
+  <text x="23" y="117" fill="#3730a3" font-family="Helvetica Neue,sans-serif" font-size="8.5" font-weight="700">Interviewer</text>
+  <text x="23" y="128" fill="#64748b" font-family="Menlo,monospace" font-size="7.5">00:00:00</text>
+  <rect x="92" y="104" width="254" height="30" rx="5" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="102" y="112" width="218" height="5.5" rx="2" fill="#334155" fill-opacity="0.55"/>
+  <rect x="102" y="122" width="170" height="5" rx="2" fill="#64748b" fill-opacity="0.4"/>
+  <!-- 2-Col Speaker Turn Card 2 (Interviewee) -->
+  <rect x="14" y="139" width="74" height="30" rx="5" fill="#ecfdf5" stroke="#cbd5e1"/>
+  <rect x="14" y="139" width="4" height="30" rx="2" fill="#0d9488"/>
+  <text x="23" y="152" fill="#065f46" font-family="Helvetica Neue,sans-serif" font-size="8.5" font-weight="700">Marta</text>
+  <text x="23" y="163" fill="#64748b" font-family="Menlo,monospace" font-size="7.5">00:01:46</text>
+  <rect x="92" y="139" width="254" height="30" rx="5" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="102" y="147" width="228" height="5.5" rx="2" fill="#334155" fill-opacity="0.55"/>
+  <rect x="102" y="157" width="194" height="5" rx="2" fill="#64748b" fill-opacity="0.4"/>
+  <rect x="14" y="175" width="332" height="17" rx="4" fill="#e2e8f0"/>
+  <text x="22" y="187" fill="#334155" font-family="Helvetica Neue,sans-serif" font-size="9" font-weight="600">Styled Word (.docx)  •  62 UI cards/tables  •  61.7 KB</text>
+</svg>

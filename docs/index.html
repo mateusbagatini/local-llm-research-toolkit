@@ -647,6 +647,201 @@
       color: var(--text-muted);
     }
 
+    /* Workshop Example Output Cards & Gallery */
+    .gallery-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--teal);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      margin-bottom: 34px;
+      box-shadow: var(--shadow-sm);
+    }
+    .gallery-header { font-size: 15.5px; font-weight: 700; color: var(--teal); margin-bottom: 4px; }
+    .gallery-sub { margin: 0 0 14px; font-size: 13.5px; color: var(--text-muted); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+    }
+    .gal-card {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.14s, border-color 0.15s;
+    }
+    .gal-card:hover { transform: translateY(-2px); border-color: var(--teal); }
+    .gal-thumb, .example-thumb-btn {
+      position: relative;
+      display: block;
+      padding: 0;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      overflow: hidden;
+      width: 100%;
+    }
+    .gal-thumb img, .example-thumb-btn img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.2s ease;
+    }
+    .gal-thumb:hover img, .example-thumb-btn:hover img { transform: scale(1.03); }
+    .thumb-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.56);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.16s ease;
+    }
+    .gal-thumb:hover .thumb-overlay, .example-thumb-btn:hover .thumb-overlay { opacity: 1; }
+    .gal-body { padding: 11px 12px 12px; display: flex; flex-direction: column; flex: 1; gap: 6px; }
+    .gal-badge { font-size: 10.5px; font-weight: 700; color: var(--indigo); }
+    .gal-title { font-size: 12.8px; font-weight: 700; color: var(--text-strong); line-height: 1.35; flex: 1; }
+    .gal-btns { display: flex; gap: 6px; margin-top: 4px; }
+    .gal-btn-pv, .gal-btn-dl {
+      flex: 1;
+      text-align: center;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 6px 8px;
+      border-radius: 7px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .gal-btn-pv { background: var(--navy); color: #ffffff; border: 1px solid var(--navy); }
+    .gal-btn-dl { background: var(--surface); color: var(--teal); border: 1px solid var(--teal); }
+    .gal-btn-dl:hover { background: var(--teal); color: #ffffff; text-decoration: none; }
+
+    .example-card {
+      display: grid;
+      grid-template-columns: 270px 1fr;
+      gap: 18px;
+      align-items: center;
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      border-left: 5px solid var(--teal);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin: 18px 0 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .example-thumb-btn { border-radius: 9px; border: 1px solid var(--border); }
+    .example-eyebrow {
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      color: var(--teal);
+      margin-bottom: 4px;
+    }
+    .example-title { font-size: 16px; font-weight: 700; color: var(--text-strong); margin-bottom: 6px; }
+    .example-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+    .example-meta code {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      padding: 2px 7px;
+      border-radius: 5px;
+      color: var(--text-strong);
+    }
+    .example-pill {
+      background: var(--indigo-soft);
+      color: var(--indigo);
+      font-weight: 700;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+    .example-desc { margin: 0 0 12px; font-size: 13.5px; color: var(--text-muted); line-height: 1.55; }
+    .example-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .ex-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 13px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.14s, transform 0.12s;
+    }
+    .ex-btn:hover { opacity: 0.92; transform: translateY(-1px); text-decoration: none; }
+    .ex-btn-primary { background: var(--navy); color: #ffffff; border: 1px solid var(--navy); }
+    .ex-btn-dl { background: var(--teal); color: #042f2e; border: 1px solid var(--teal); }
+    .ex-btn-ghost { background: var(--surface-alt); color: var(--text-strong); border: 1px solid var(--border-strong); }
+
+    /* Quick View Modal */
+    .pv-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(2, 6, 23, 0.72);
+      backdrop-filter: blur(5px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .pv-modal.open { display: flex; }
+    .pv-dialog {
+      width: min(1140px, 96vw);
+      height: min(86vh, 860px);
+      background: var(--surface);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+      border: 1px solid var(--border-strong);
+    }
+    .pv-dialog-bar {
+      background: var(--navy);
+      color: #ffffff;
+      padding: 11px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .pv-dialog-title { font-weight: 700; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .pv-dialog-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .pv-modal-btn {
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 7px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .pv-modal-btn:hover { background: var(--teal); color: #042f2e; border-color: var(--teal); text-decoration: none; }
+    .pv-frame { flex: 1; width: 100%; border: none; background: #f8fafc; }
+
+    @media (max-width: 780px) {
+      .example-card { grid-template-columns: 1fr; }
+    }
+
     @media (max-width: 960px) {
       .mobile-menu-btn { display: inline-flex; }
       .sidebar {
@@ -928,6 +1123,73 @@
               <div class="roadmap-header">Guide Structure &amp; Chapter Roadmap</div>
               <div class="roadmap-grid"><a class="roadmap-item" href="#en-ch-1"><div class="roadmap-title">Chapter 1  Overview, Research Ethics &amp; Hardware</div><div class="roadmap-desc">What local LLMs are, AI philosophy, IRB/AAA/ASA privacy risks, cloud retention comparison, offline field recorders, and Apple Silicon UMA advantages.</div></a><a class="roadmap-item" href="#en-ch-2"><div class="roadmap-title">Chapter 2  Ollama &amp; Installing Local Models</div><div class="roadmap-desc">Setting up Ollama, pulling Gemma 4/3 and Qwen 2.5 Coder, building custom 32,768-context Modelfiles, and installing Whisper (MLX + PyTorch + Vibe).</div></a><a class="roadmap-item" href="#en-ch-3"><div class="roadmap-title">Chapter 3  Antigravity Setup &amp; Multi-Layer Guardrails</div><div class="roadmap-desc">Isolated workspace, Require Review / Always Ask / Deny sudo, Security Constitution, mechanical PreToolUse hook, Docker, Drive, and Browser isolation.</div></a><a class="roadmap-item" href="#en-ch-4"><div class="roadmap-title">Chapter 4  Local Audio Transcription &amp; Proofreading</div><div class="roadmap-desc">Apple Silicon MLX optimization, Silero VAD noise gating, transcribe_local.py, Vibe GUI, and semantic_proofread_ai.py.</div></a><a class="roadmap-item" href="#en-ch-5"><div class="roadmap-title">Chapter 5  Talking With Your Transcripts &amp; Data</div><div class="roadmap-desc">Interacting with local models safely inside Antigravity (path-only), macOS Terminal (research_ai.py, spreadsheet_ai.py, ollama run), and Ollama Desktop App.</div></a><a class="roadmap-item" href="#en-ch-6"><div class="roadmap-title">Chapter 6  Creating Deliverables With Qwen + Gemma</div><div class="roadmap-desc">Dual-agent UX Transcript Cards (.docx), Three-Pass Sentiment Analysis (.xlsx), and 6-Chart Visual Analytics Workbooks (.xlsx) with exact prompts.</div></a><a class="roadmap-item" href="#en-ch-7"><div class="roadmap-title">Chapter 7  5-Agent Pipeline &amp; Privacy Audit</div><div class="roadmap-desc">Concurrent end-to-end execution (run_marta_project_agents.py) and IRB-ready Cryptographic Privacy Evidence Reports.</div></a><a class="roadmap-item" href="#en-ch-8"><div class="roadmap-title">Chapter 8  Offline Live Teleprompter Project</div><div class="roadmap-desc">Real-time JA ↔ EN speech translator (live_translator/), NDJSON streaming, phonetic custom dictionary, and Local Wi-Fi Reviewer Console.</div></a><a class="roadmap-item" href="#en-ch-9"><div class="roadmap-title">Appendices A–C  Reference, Prompts &amp; Troubleshooting</div><div class="roadmap-desc">Complete Python script &amp; Modelfile directory reference, copy-paste Prompt Library, and verification / troubleshooting checklist.</div></a></div>
             </div>
+            
+        <div class="gallery-box" id="en-examples">
+          <div class="gallery-header">Workshop Example Outputs — Preview &amp; Download</div>
+          <p class="gallery-sub">Explore the actual offline outputs produced by our local Whisper, Gemma, and Qwen pipeline—click any thumbnail for an interactive Quick View or download the source file.</p>
+          <div class="gallery-grid">
+                <div class="gal-card">
+                  <button class="gal-thumb" type="button" data-preview="examples/previews/preview_raw_txt.html" data-download="examples/Interview_trends_Marta_London.txt" data-title="Raw Local Whisper Transcript (.txt)">
+                    <img src="examples/previews/thumb_raw_txt.svg" alt="Raw Local Whisper Transcript (.txt)" loading="lazy" />
+                    <span class="thumb-overlay">👁 Quick View</span>
+                  </button>
+                  <div class="gal-body">
+                    <div class="gal-badge">TXT  •  37.7 KB  •  25 Timestamped Blocks</div>
+                    <div class="gal-title">Raw Local Whisper Transcript (.txt)</div>
+                    <div class="gal-btns">
+                      <button class="gal-btn-pv" type="button" data-preview="examples/previews/preview_raw_txt.html" data-download="examples/Interview_trends_Marta_London.txt" data-title="Raw Local Whisper Transcript (.txt)">👁 Quick View</button>
+                      <a class="gal-btn-dl" href="examples/Interview_trends_Marta_London.txt" download>↓ Download</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="gal-card">
+                  <button class="gal-thumb" type="button" data-preview="examples/previews/preview_docx.html" data-download="examples/Interview_trends_Marta_London.docx" data-title="Edited &amp; UX-Styled Word Transcript (Gemma + Qwen)">
+                    <img src="examples/previews/thumb_docx.svg" alt="Edited &amp; UX-Styled Word Transcript (Gemma + Qwen)" loading="lazy" />
+                    <span class="thumb-overlay">👁 Quick View</span>
+                  </button>
+                  <div class="gal-body">
+                    <div class="gal-badge">DOCX  •  61.7 KB  •  62 Styled UI Cards</div>
+                    <div class="gal-title">Edited &amp; UX-Styled Word Transcript (Gemma + Qwen)</div>
+                    <div class="gal-btns">
+                      <button class="gal-btn-pv" type="button" data-preview="examples/previews/preview_docx.html" data-download="examples/Interview_trends_Marta_London.docx" data-title="Edited &amp; UX-Styled Word Transcript (Gemma + Qwen)">👁 Quick View</button>
+                      <a class="gal-btn-dl" href="examples/Interview_trends_Marta_London.docx" download>↓ Download</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="gal-card">
+                  <button class="gal-thumb" type="button" data-preview="examples/previews/preview_sentiment.html" data-download="examples/Interview_trends_Marta_London_Sentiment_Analysis.xlsx" data-title="Qualitative Sentiment Analysis Workbook (.xlsx)">
+                    <img src="examples/previews/thumb_sentiment.svg" alt="Qualitative Sentiment Analysis Workbook (.xlsx)" loading="lazy" />
+                    <span class="thumb-overlay">👁 Quick View</span>
+                  </button>
+                  <div class="gal-body">
+                    <div class="gal-badge">XLSX  •  31.6 KB  •  3 Analytical Tabs</div>
+                    <div class="gal-title">Qualitative Sentiment Analysis Workbook (.xlsx)</div>
+                    <div class="gal-btns">
+                      <button class="gal-btn-pv" type="button" data-preview="examples/previews/preview_sentiment.html" data-download="examples/Interview_trends_Marta_London_Sentiment_Analysis.xlsx" data-title="Qualitative Sentiment Analysis Workbook (.xlsx)">👁 Quick View</button>
+                      <a class="gal-btn-dl" href="examples/Interview_trends_Marta_London_Sentiment_Analysis.xlsx" download>↓ Download</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="gal-card">
+                  <button class="gal-thumb" type="button" data-preview="examples/previews/preview_charts.html" data-download="examples/Interview_trends_Marta_London_Sentiment_Charts.xlsx" data-title="Sentiment Analysis Charts &amp; Dashboard Workbook (.xlsx)">
+                    <img src="examples/previews/thumb_charts.svg" alt="Sentiment Analysis Charts &amp; Dashboard Workbook (.xlsx)" loading="lazy" />
+                    <span class="thumb-overlay">👁 Quick View</span>
+                  </button>
+                  <div class="gal-body">
+                    <div class="gal-badge">XLSX  •  41.4 KB  •  6 Native Excel Charts</div>
+                    <div class="gal-title">Sentiment Analysis Charts &amp; Dashboard Workbook (.xlsx)</div>
+                    <div class="gal-btns">
+                      <button class="gal-btn-pv" type="button" data-preview="examples/previews/preview_charts.html" data-download="examples/Interview_trends_Marta_London_Sentiment_Charts.xlsx" data-title="Sentiment Analysis Charts &amp; Dashboard Workbook (.xlsx)">👁 Quick View</button>
+                      <a class="gal-btn-dl" href="examples/Interview_trends_Marta_London_Sentiment_Charts.xlsx" download>↓ Download</a>
+                    </div>
+                  </div>
+                </div>
+                </div>
+        </div>
+        
             
 
             <section class="chapter" id="en-ch-1">
@@ -1319,6 +1581,25 @@ python3 transcribe_local.py -f &quot;data/interview.m4a&quot; \
   --analysis-output &quot;reports/interview_summary.md&quot; </code></pre>
             </div>
             
+
+        <div class="example-card">
+          <button class="example-thumb-btn" type="button" data-preview="examples/previews/preview_raw_txt.html" data-download="examples/Interview_trends_Marta_London.txt" data-title="Raw Local Whisper Transcript (.txt)" aria-label="👁 Quick View">
+            <img src="examples/previews/thumb_raw_txt.svg" alt="Raw Local Whisper Transcript (.txt)" loading="lazy" />
+            <span class="thumb-overlay">👁 Quick View</span>
+          </button>
+          <div class="example-info">
+            <div class="example-eyebrow">WORKSHOP EXAMPLE OUTPUT #1 — RAW WHISPER TRANSCRIPT</div>
+            <div class="example-title">Raw Local Whisper Transcript (.txt)</div>
+            <div class="example-meta"><code>Interview_trends_Marta_London.txt</code> <span class="example-pill">TXT  •  37.7 KB  •  25 Timestamped Blocks</span></div>
+            <p class="example-desc">Direct offline output from local Whisper (turbo on Apple Silicon MLX) with [HH:MM:SS - HH:MM:SS] timestamps and zero cloud upload.</p>
+            <div class="example-actions">
+              <button class="ex-btn ex-btn-primary" type="button" data-preview="examples/previews/preview_raw_txt.html" data-download="examples/Interview_trends_Marta_London.txt" data-title="Raw Local Whisper Transcript (.txt)">👁 Quick View</button>
+              <a class="ex-btn ex-btn-dl" href="examples/Interview_trends_Marta_London.txt" download>↓ Download</a>
+              <a class="ex-btn ex-btn-ghost" href="examples/previews/preview_raw_txt.html" target="_blank" rel="noopener noreferrer">↗ New Tab</a>
+            </div>
+          </div>
+        </div>
+        
 <h3 class="sec-h2" id="en-sec-19">4.3 Semantic Proofreading With Local Gemma (<code>semantic_proofread_ai.py</code>)</h3>
 <p class='body-p'>Even the best speech-to-text models occasionally misspell proper nouns, domain jargon, brand names, or homophones (e.g., phonetic guesses on accented English or specialized terms). Before running thematic or sentiment analysis, run <code>semantic_proofread_ai.py</code>. It loads the raw <code>.txt</code> transcript strictly in local RAM, splits each timestamped block into sentence-aligned chunks (~320 words), and uses local <code>gemma4-research</code> to correct phonetic errors and punctuation **without altering speaker meaning or <code>[HH:MM:SS - HH:MM:SS]</code> timestamps**.</p>
 
@@ -1506,6 +1787,25 @@ python3 transcript_to_docx_ai.py \
   -m qwen2.5-coder:7b</code></pre>
             </div>
             
+
+        <div class="example-card">
+          <button class="example-thumb-btn" type="button" data-preview="examples/previews/preview_docx.html" data-download="examples/Interview_trends_Marta_London.docx" data-title="Edited &amp; UX-Styled Word Transcript (Gemma + Qwen)" aria-label="👁 Quick View">
+            <img src="examples/previews/thumb_docx.svg" alt="Edited &amp; UX-Styled Word Transcript (Gemma + Qwen)" loading="lazy" />
+            <span class="thumb-overlay">👁 Quick View</span>
+          </button>
+          <div class="example-info">
+            <div class="example-eyebrow">WORKSHOP EXAMPLE OUTPUT #2 — DUAL-AGENT STYLED TRANSCRIPT</div>
+            <div class="example-title">Edited &amp; UX-Styled Word Transcript (Gemma + Qwen)</div>
+            <div class="example-meta"><code>Interview_trends_Marta_London.docx</code> <span class="example-pill">DOCX  •  61.7 KB  •  62 Styled UI Cards</span></div>
+            <p class="example-desc">Generated offline by Gemma (Executive Summary &amp; Top 3 Themes) paired with Qwen 2.5 Coder (Dark Hero Header, Timeline Index &amp; Color-Coded Speaker Turn Cards).</p>
+            <div class="example-actions">
+              <button class="ex-btn ex-btn-primary" type="button" data-preview="examples/previews/preview_docx.html" data-download="examples/Interview_trends_Marta_London.docx" data-title="Edited &amp; UX-Styled Word Transcript (Gemma + Qwen)">👁 Quick View</button>
+              <a class="ex-btn ex-btn-dl" href="examples/Interview_trends_Marta_London.docx" download>↓ Download</a>
+              <a class="ex-btn ex-btn-ghost" href="examples/previews/preview_docx.html" target="_blank" rel="noopener noreferrer">↗ New Tab</a>
+            </div>
+          </div>
+        </div>
+        
 <h3 class="sec-h2" id="en-sec-25">6.3 Deliverable 2: Three-Pass Qualitative Sentiment Analysis (<code>.xlsx</code>)</h3>
 <p class='body-p'>To ensure methodological rigor—rather than arbitrary or inconsistent AI ratings—our sentiment workflow follows a strict <strong>Three-Pass Qualitative Analysis Protocol</strong> (from the Sophia Social Sciences Workshop), producing a 3-tab Excel workbook (<code>Executive Summary</code>, <code>Topic Trend Sentiment</code>, <code>Utterance Sentiment</code>) via <code>sentiment_spreadsheet_ai.py</code>.</p>
 
@@ -1548,6 +1848,25 @@ python3 sentiment_spreadsheet_ai.py \
   --coder-model qwen2.5-coder:7b</code></pre>
             </div>
             
+
+        <div class="example-card">
+          <button class="example-thumb-btn" type="button" data-preview="examples/previews/preview_sentiment.html" data-download="examples/Interview_trends_Marta_London_Sentiment_Analysis.xlsx" data-title="Qualitative Sentiment Analysis Workbook (.xlsx)" aria-label="👁 Quick View">
+            <img src="examples/previews/thumb_sentiment.svg" alt="Qualitative Sentiment Analysis Workbook (.xlsx)" loading="lazy" />
+            <span class="thumb-overlay">👁 Quick View</span>
+          </button>
+          <div class="example-info">
+            <div class="example-eyebrow">WORKSHOP EXAMPLE OUTPUT #3 — THREE-PASS SENTIMENT ANALYSIS</div>
+            <div class="example-title">Qualitative Sentiment Analysis Workbook (.xlsx)</div>
+            <div class="example-meta"><code>Interview_trends_Marta_London_Sentiment_Analysis.xlsx</code> <span class="example-pill">XLSX  •  31.6 KB  •  3 Analytical Tabs</span></div>
+            <p class="example-desc">3-tab Excel deliverable (Executive Summary, Topic Trend Sentiment, Utterance Sentiment) built with Gemma&#x27;s 3-pass qualitative scoring and Qwen&#x27;s openpyxl formatting.</p>
+            <div class="example-actions">
+              <button class="ex-btn ex-btn-primary" type="button" data-preview="examples/previews/preview_sentiment.html" data-download="examples/Interview_trends_Marta_London_Sentiment_Analysis.xlsx" data-title="Qualitative Sentiment Analysis Workbook (.xlsx)">👁 Quick View</button>
+              <a class="ex-btn ex-btn-dl" href="examples/Interview_trends_Marta_London_Sentiment_Analysis.xlsx" download>↓ Download</a>
+              <a class="ex-btn ex-btn-ghost" href="examples/previews/preview_sentiment.html" target="_blank" rel="noopener noreferrer">↗ New Tab</a>
+            </div>
+          </div>
+        </div>
+        
 <h3 class="sec-h2" id="en-sec-26">6.4 Deliverable 3: Interactive Visual Analytics &amp; Excel Charts (<code>.xlsx</code>)</h3>
 <p class='body-p'>Once your 3-tab sentiment workbook is created, <code>generate_sentiment_charts_ai.py</code> reads the metrics strictly in local Python memory, asks local <strong>Gemma 4</strong> to synthesize visual takeaways and chart titles, and uses **Qwen 2.5 Coder + <code>openpyxl.chart</code>** to create a brand-new 5-tab workbook containing all original sheets plus a <code>Visual Analytics &amp; Charts</code> dashboard and a <code>Chart Data Engine</code> tab powering <strong>6 native interactive Excel charts</strong>:</p>
 
@@ -1588,6 +1907,25 @@ python3 generate_sentiment_charts_ai.py \
   --coder-model qwen2.5-coder:7b</code></pre>
             </div>
             
+
+        <div class="example-card">
+          <button class="example-thumb-btn" type="button" data-preview="examples/previews/preview_charts.html" data-download="examples/Interview_trends_Marta_London_Sentiment_Charts.xlsx" data-title="Sentiment Analysis Charts &amp; Dashboard Workbook (.xlsx)" aria-label="👁 Quick View">
+            <img src="examples/previews/thumb_charts.svg" alt="Sentiment Analysis Charts &amp; Dashboard Workbook (.xlsx)" loading="lazy" />
+            <span class="thumb-overlay">👁 Quick View</span>
+          </button>
+          <div class="example-info">
+            <div class="example-eyebrow">WORKSHOP EXAMPLE OUTPUT #4 — VISUAL ANALYTICS &amp; CHARTS</div>
+            <div class="example-title">Sentiment Analysis Charts &amp; Dashboard Workbook (.xlsx)</div>
+            <div class="example-meta"><code>Interview_trends_Marta_London_Sentiment_Charts.xlsx</code> <span class="example-pill">XLSX  •  41.4 KB  •  6 Native Excel Charts</span></div>
+            <p class="example-desc">5-tab visual analytics workbook featuring 6 native interactive Excel charts (Doughnut, Cluster Scores, Share of Voice, Polarity Stack, Timeline Moving Avg &amp; Dominant Tones).</p>
+            <div class="example-actions">
+              <button class="ex-btn ex-btn-primary" type="button" data-preview="examples/previews/preview_charts.html" data-download="examples/Interview_trends_Marta_London_Sentiment_Charts.xlsx" data-title="Sentiment Analysis Charts &amp; Dashboard Workbook (.xlsx)">👁 Quick View</button>
+              <a class="ex-btn ex-btn-dl" href="examples/Interview_trends_Marta_London_Sentiment_Charts.xlsx" download>↓ Download</a>
+              <a class="ex-btn ex-btn-ghost" href="examples/previews/preview_charts.html" target="_blank" rel="noopener noreferrer">↗ New Tab</a>
+            </div>
+          </div>
+        </div>
+        
 </section>
 
             <section class="chapter" id="en-ch-7">
@@ -1933,6 +2271,73 @@ ollama run gemma4:latest &quot;Reply with &#x27;Offline ready!&#x27; in 3 words.
               <div class="roadmap-header">本ガイドの構成と目次マップ</div>
               <div class="roadmap-grid"><a class="roadmap-item" href="#ja-ch-1"><div class="roadmap-title">第1章  概要・研究倫理・ハードウェア基盤</div><div class="roadmap-desc">ローカルLLMとは何か、研究におけるAI活用の哲学、IRB/AAA/ASA倫理基準、クラウドAIの保持期間比較、オフライン録音ツール、Apple Siliconの強み。</div></a><a class="roadmap-item" href="#ja-ch-2"><div class="roadmap-title">第2章  Ollama とローカルモデルの導入</div><div class="roadmap-desc">Ollamaの仕組みとインストール、Gemma 4/3・Qwen 2.5 Coderの取得、32,768コンテキストのカスタムModelfile作成、Whisper（MLX/PyTorch/Vibe）導入。</div></a><a class="roadmap-item" href="#ja-ch-3"><div class="roadmap-title">第3章  Antigravity設定と多層ガードレール</div><div class="roadmap-desc">隔離ワークスペース、Require Review / Always Ask / sudo禁止、セキュリティ憲法、PreToolUse機械的フック、Docker・Google Drive・ブラウザ隔離。</div></a><a class="roadmap-item" href="#ja-ch-4"><div class="roadmap-title">第4章  ローカル文字起こしと意味的校正</div><div class="roadmap-desc">Apple Mチップ最適化（mlx-whisper + Silero VAD）、transcribe_local.pyの実行手順、Vibeアプリ、semantic_proofread_ai.pyによるタイムスタンプ保持校正。</div></a><a class="roadmap-item" href="#ja-ch-5"><div class="roadmap-title">第5章  文字起こし・データとの対話手法</div><div class="roadmap-desc">Antigravity内での安全なファイルパス指定運用、macOSターミナル対話（research_ai.py / spreadsheet_ai.py / ollama run）、Ollamaデスクトップアプリ活用。</div></a><a class="roadmap-item" href="#ja-ch-6"><div class="roadmap-title">第6章  Qwen ＋ Gemma による成果物作成</div><div class="roadmap-desc">UI付き文字起こしカード（.docx）、3パス質的感情分析ワークブック（.xlsx）、ネイティブExcelグラフ6種ダッシュボード（.xlsx）と実践プロンプト。</div></a><a class="roadmap-item" href="#ja-ch-7"><div class="roadmap-title">第7章  5エージェント並列パイプラインとプライバシー監査</div><div class="roadmap-desc">音声から全成果物を一括並列生成する run_marta_project_agents.py と、倫理委員会（IRB）提出用の暗号ハッシュ監査レポート。</div></a><a class="roadmap-item" href="#ja-ch-8"><div class="roadmap-title">第8章  オフライン・ライブテレプロンプター計画</div><div class="roadmap-desc">日英双方向リアルタイム字幕翻訳（live_translator/）、NDJSON逐次表示、音韻ファジー辞書、ローカルWi-Fiレビュアーコンソール。</div></a><a class="roadmap-item" href="#ja-ch-9"><div class="roadmap-title">付録 A〜C  スクリプト一覧・プロンプト集・トラブル対策</div><div class="roadmap-desc">全Pythonスクリプト＆Modelfile完全リファレンス、コピペ用プロンプトライブラリ、オフライン事前検証チェックリスト。</div></a></div>
             </div>
+            
+        <div class="gallery-box" id="ja-examples">
+          <div class="gallery-header">ワークショップ実例ファイル — プレビュー＆ダウンロード</div>
+          <p class="gallery-sub">ローカルWhisper・Gemma・Qwenパイプラインで実際に生成された4つの成果物です。サムネイルをクリックするとブラウザ上でそのままプレビューでき、元ファイルもダウンロード可能です。</p>
+          <div class="gallery-grid">
+                <div class="gal-card">
+                  <button class="gal-thumb" type="button" data-preview="examples/previews/preview_raw_txt.html" data-download="examples/Interview_trends_Marta_London.txt" data-title="ローカルWhisper 生文字起こし（.txt）">
+                    <img src="examples/previews/thumb_raw_txt.svg" alt="ローカルWhisper 生文字起こし（.txt）" loading="lazy" />
+                    <span class="thumb-overlay">👁 プレビュー</span>
+                  </button>
+                  <div class="gal-body">
+                    <div class="gal-badge">TXT  •  37.7 KB  •  25 Timestamped Blocks</div>
+                    <div class="gal-title">ローカルWhisper 生文字起こし（.txt）</div>
+                    <div class="gal-btns">
+                      <button class="gal-btn-pv" type="button" data-preview="examples/previews/preview_raw_txt.html" data-download="examples/Interview_trends_Marta_London.txt" data-title="ローカルWhisper 生文字起こし（.txt）">👁 プレビュー</button>
+                      <a class="gal-btn-dl" href="examples/Interview_trends_Marta_London.txt" download>↓ 保存</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="gal-card">
+                  <button class="gal-thumb" type="button" data-preview="examples/previews/preview_docx.html" data-download="examples/Interview_trends_Marta_London.docx" data-title="Gemma＋Qwen 整形済みUI文字起こし（.docx）">
+                    <img src="examples/previews/thumb_docx.svg" alt="Gemma＋Qwen 整形済みUI文字起こし（.docx）" loading="lazy" />
+                    <span class="thumb-overlay">👁 プレビュー</span>
+                  </button>
+                  <div class="gal-body">
+                    <div class="gal-badge">DOCX  •  61.7 KB  •  62 Styled UI Cards</div>
+                    <div class="gal-title">Gemma＋Qwen 整形済みUI文字起こし（.docx）</div>
+                    <div class="gal-btns">
+                      <button class="gal-btn-pv" type="button" data-preview="examples/previews/preview_docx.html" data-download="examples/Interview_trends_Marta_London.docx" data-title="Gemma＋Qwen 整形済みUI文字起こし（.docx）">👁 プレビュー</button>
+                      <a class="gal-btn-dl" href="examples/Interview_trends_Marta_London.docx" download>↓ 保存</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="gal-card">
+                  <button class="gal-thumb" type="button" data-preview="examples/previews/preview_sentiment.html" data-download="examples/Interview_trends_Marta_London_Sentiment_Analysis.xlsx" data-title="3タブ質的感情分析スプレッドシート（.xlsx）">
+                    <img src="examples/previews/thumb_sentiment.svg" alt="3タブ質的感情分析スプレッドシート（.xlsx）" loading="lazy" />
+                    <span class="thumb-overlay">👁 プレビュー</span>
+                  </button>
+                  <div class="gal-body">
+                    <div class="gal-badge">XLSX  •  31.6 KB  •  3 Analytical Tabs</div>
+                    <div class="gal-title">3タブ質的感情分析スプレッドシート（.xlsx）</div>
+                    <div class="gal-btns">
+                      <button class="gal-btn-pv" type="button" data-preview="examples/previews/preview_sentiment.html" data-download="examples/Interview_trends_Marta_London_Sentiment_Analysis.xlsx" data-title="3タブ質的感情分析スプレッドシート（.xlsx）">👁 プレビュー</button>
+                      <a class="gal-btn-dl" href="examples/Interview_trends_Marta_London_Sentiment_Analysis.xlsx" download>↓ 保存</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="gal-card">
+                  <button class="gal-thumb" type="button" data-preview="examples/previews/preview_charts.html" data-download="examples/Interview_trends_Marta_London_Sentiment_Charts.xlsx" data-title="ネイティブExcelグラフ6種付き分析ワークブック（.xlsx）">
+                    <img src="examples/previews/thumb_charts.svg" alt="ネイティブExcelグラフ6種付き分析ワークブック（.xlsx）" loading="lazy" />
+                    <span class="thumb-overlay">👁 プレビュー</span>
+                  </button>
+                  <div class="gal-body">
+                    <div class="gal-badge">XLSX  •  41.4 KB  •  6 Native Excel Charts</div>
+                    <div class="gal-title">ネイティブExcelグラフ6種付き分析ワークブック（.xlsx）</div>
+                    <div class="gal-btns">
+                      <button class="gal-btn-pv" type="button" data-preview="examples/previews/preview_charts.html" data-download="examples/Interview_trends_Marta_London_Sentiment_Charts.xlsx" data-title="ネイティブExcelグラフ6種付き分析ワークブック（.xlsx）">👁 プレビュー</button>
+                      <a class="gal-btn-dl" href="examples/Interview_trends_Marta_London_Sentiment_Charts.xlsx" download>↓ 保存</a>
+                    </div>
+                  </div>
+                </div>
+                </div>
+        </div>
+        
             
 
             <section class="chapter" id="ja-ch-1">
@@ -2326,6 +2731,25 @@ python3 transcribe_local.py -f &quot;data/interview.m4a&quot; \
   --analysis-output &quot;reports/interview_summary.md&quot; </code></pre>
             </div>
             
+
+        <div class="example-card">
+          <button class="example-thumb-btn" type="button" data-preview="examples/previews/preview_raw_txt.html" data-download="examples/Interview_trends_Marta_London.txt" data-title="ローカルWhisper 生文字起こし（.txt）" aria-label="👁 クイックプレビュー">
+            <img src="examples/previews/thumb_raw_txt.svg" alt="ローカルWhisper 生文字起こし（.txt）" loading="lazy" />
+            <span class="thumb-overlay">👁 クイックプレビュー</span>
+          </button>
+          <div class="example-info">
+            <div class="example-eyebrow">ワークショップ実例出力 #1 — 生のWhisper文字起こし</div>
+            <div class="example-title">ローカルWhisper 生文字起こし（.txt）</div>
+            <div class="example-meta"><code>Interview_trends_Marta_London.txt</code> <span class="example-pill">TXT  •  37.7 KB  •  25 Timestamped Blocks</span></div>
+            <p class="example-desc">Apple Silicon MLX上のローカルWhisper（turbo）で完全オフライン生成された [HH:MM:SS - HH:MM:SS] タイムスタンプ付き生データ。</p>
+            <div class="example-actions">
+              <button class="ex-btn ex-btn-primary" type="button" data-preview="examples/previews/preview_raw_txt.html" data-download="examples/Interview_trends_Marta_London.txt" data-title="ローカルWhisper 生文字起こし（.txt）">👁 クイックプレビュー</button>
+              <a class="ex-btn ex-btn-dl" href="examples/Interview_trends_Marta_London.txt" download>↓ ダウンロード</a>
+              <a class="ex-btn ex-btn-ghost" href="examples/previews/preview_raw_txt.html" target="_blank" rel="noopener noreferrer">↗ 別タブで開く</a>
+            </div>
+          </div>
+        </div>
+        
 <h3 class="sec-h2" id="ja-sec-19">4.3 ローカルGemmaによる意味的校正（<code>semantic_proofread_ai.py</code>）</h3>
 <p class='body-p'>高精度なWhisperであっても、固有名詞・専門用語・同音異義語・句読点の誤りは発生します。分析へ進む前に <code>semantic_proofread_ai.py</code> を実行すると、生の <code>.txt</code> をローカルRAM内で文単位（約320語チャンク）に分割し、<code>gemma4-research</code> が文脈に基づいて誤字・音訳ミスを修正します。すべての <code>[HH:MM:SS - HH:MM:SS]</code> タイムスタンプと話者の本来の意味は厳密に保持されます。</p>
 
@@ -2513,6 +2937,25 @@ python3 transcript_to_docx_ai.py \
   -m qwen2.5-coder:7b</code></pre>
             </div>
             
+
+        <div class="example-card">
+          <button class="example-thumb-btn" type="button" data-preview="examples/previews/preview_docx.html" data-download="examples/Interview_trends_Marta_London.docx" data-title="Gemma＋Qwen 整形済みUI文字起こし（.docx）" aria-label="👁 クイックプレビュー">
+            <img src="examples/previews/thumb_docx.svg" alt="Gemma＋Qwen 整形済みUI文字起こし（.docx）" loading="lazy" />
+            <span class="thumb-overlay">👁 クイックプレビュー</span>
+          </button>
+          <div class="example-info">
+            <div class="example-eyebrow">ワークショップ実例出力 #2 — 2体連携UI文字起こしWord</div>
+            <div class="example-title">Gemma＋Qwen 整形済みUI文字起こし（.docx）</div>
+            <div class="example-meta"><code>Interview_trends_Marta_London.docx</code> <span class="example-pill">DOCX  •  61.7 KB  •  62 Styled UI Cards</span></div>
+            <p class="example-desc">Gemmaによる冒頭要約・主要3テーマと、Qwen 2.5 Coderによるダークネイビーヘッダー・進行バー・色分け話者カードを組み合わせた完成版Wordファイル。</p>
+            <div class="example-actions">
+              <button class="ex-btn ex-btn-primary" type="button" data-preview="examples/previews/preview_docx.html" data-download="examples/Interview_trends_Marta_London.docx" data-title="Gemma＋Qwen 整形済みUI文字起こし（.docx）">👁 クイックプレビュー</button>
+              <a class="ex-btn ex-btn-dl" href="examples/Interview_trends_Marta_London.docx" download>↓ ダウンロード</a>
+              <a class="ex-btn ex-btn-ghost" href="examples/previews/preview_docx.html" target="_blank" rel="noopener noreferrer">↗ 別タブで開く</a>
+            </div>
+          </div>
+        </div>
+        
 <h3 class="sec-h2" id="ja-sec-25">6.3 成果物2：3パス質的感情分析ワークブック（<code>.xlsx</code>）</h3>
 <p class='body-p'>AIによる場当たり的なスコア付けを防ぎ、質的研究として再現可能な厳密さを担保するため、ワークショップで定義した<strong>3パス質的感情分析プロトコル</strong>を <code>sentiment_spreadsheet_ai.py</code> に実装しています。出力は必ず3タブ構成（<code>Executive Summary</code>、<code>Topic Trend Sentiment</code>、<code>Utterance Sentiment</code>）のExcelファイルになります。</p>
 
@@ -2553,6 +2996,25 @@ python3 sentiment_spreadsheet_ai.py \
   --coder-model qwen2.5-coder:7b</code></pre>
             </div>
             
+
+        <div class="example-card">
+          <button class="example-thumb-btn" type="button" data-preview="examples/previews/preview_sentiment.html" data-download="examples/Interview_trends_Marta_London_Sentiment_Analysis.xlsx" data-title="3タブ質的感情分析スプレッドシート（.xlsx）" aria-label="👁 クイックプレビュー">
+            <img src="examples/previews/thumb_sentiment.svg" alt="3タブ質的感情分析スプレッドシート（.xlsx）" loading="lazy" />
+            <span class="thumb-overlay">👁 クイックプレビュー</span>
+          </button>
+          <div class="example-info">
+            <div class="example-eyebrow">ワークショップ実例出力 #3 — 3パス質的感情分析ワークブック</div>
+            <div class="example-title">3タブ質的感情分析スプレッドシート（.xlsx）</div>
+            <div class="example-meta"><code>Interview_trends_Marta_London_Sentiment_Analysis.xlsx</code> <span class="example-pill">XLSX  •  31.6 KB  •  3 Analytical Tabs</span></div>
+            <p class="example-desc">Gemmaによる3パス質的スコアリングとQwenのopenpyxl整形で作成された3タブ構成（Executive Summary / Topic Trend Sentiment / Utterance Sentiment）。</p>
+            <div class="example-actions">
+              <button class="ex-btn ex-btn-primary" type="button" data-preview="examples/previews/preview_sentiment.html" data-download="examples/Interview_trends_Marta_London_Sentiment_Analysis.xlsx" data-title="3タブ質的感情分析スプレッドシート（.xlsx）">👁 クイックプレビュー</button>
+              <a class="ex-btn ex-btn-dl" href="examples/Interview_trends_Marta_London_Sentiment_Analysis.xlsx" download>↓ ダウンロード</a>
+              <a class="ex-btn ex-btn-ghost" href="examples/previews/preview_sentiment.html" target="_blank" rel="noopener noreferrer">↗ 別タブで開く</a>
+            </div>
+          </div>
+        </div>
+        
 <h3 class="sec-h2" id="ja-sec-26">6.4 成果物3：ネイティブExcelグラフ6種＆可視化ダッシュボード（<code>.xlsx</code>）</h3>
 <p class='body-p'><code>generate_sentiment_charts_ai.py</code> は作成済みの感情分析ExcelをローカルPythonメモリ内のみで集計し、<strong>Gemma 4</strong> にグラフタイトルと傾向解釈を生成させた上で、**Qwen 2.5 Coder ＋ <code>openpyxl.chart</code>** によって元の3タブをすべて保持した新規5タブExcel（先頭に <code>Visual Analytics &amp; Charts</code> ダッシュボード、末尾に <code>Chart Data Engine</code> を追加）を生成します。</p>
 
@@ -2595,6 +3057,25 @@ python3 generate_sentiment_charts_ai.py \
   --coder-model qwen2.5-coder:7b</code></pre>
             </div>
             
+
+        <div class="example-card">
+          <button class="example-thumb-btn" type="button" data-preview="examples/previews/preview_charts.html" data-download="examples/Interview_trends_Marta_London_Sentiment_Charts.xlsx" data-title="ネイティブExcelグラフ6種付き分析ワークブック（.xlsx）" aria-label="👁 クイックプレビュー">
+            <img src="examples/previews/thumb_charts.svg" alt="ネイティブExcelグラフ6種付き分析ワークブック（.xlsx）" loading="lazy" />
+            <span class="thumb-overlay">👁 クイックプレビュー</span>
+          </button>
+          <div class="example-info">
+            <div class="example-eyebrow">ワークショップ実例出力 #4 — 可視化ダッシュボード＆グラフ</div>
+            <div class="example-title">ネイティブExcelグラフ6種付き分析ワークブック（.xlsx）</div>
+            <div class="example-meta"><code>Interview_trends_Marta_London_Sentiment_Charts.xlsx</code> <span class="example-pill">XLSX  •  41.4 KB  •  6 Native Excel Charts</span></div>
+            <p class="example-desc">ドーナツ・クラスタ別スコア・発話占有率・極性内訳・時系列移動平均・主要トーンの6種ネイティブExcelグラフを備えた5タブ可視化ファイル。</p>
+            <div class="example-actions">
+              <button class="ex-btn ex-btn-primary" type="button" data-preview="examples/previews/preview_charts.html" data-download="examples/Interview_trends_Marta_London_Sentiment_Charts.xlsx" data-title="ネイティブExcelグラフ6種付き分析ワークブック（.xlsx）">👁 クイックプレビュー</button>
+              <a class="ex-btn ex-btn-dl" href="examples/Interview_trends_Marta_London_Sentiment_Charts.xlsx" download>↓ ダウンロード</a>
+              <a class="ex-btn ex-btn-ghost" href="examples/previews/preview_charts.html" target="_blank" rel="noopener noreferrer">↗ 別タブで開く</a>
+            </div>
+          </div>
+        </div>
+        
 </section>
 
             <section class="chapter" id="ja-ch-7">
@@ -2908,6 +3389,21 @@ ollama run gemma4:latest &quot;「オフライン準備完了！」とだけ答�
     </main>
   </div>
 
+  <!-- Interactive Quick View Modal -->
+  <div class="pv-modal" id="previewModal" role="dialog" aria-modal="true" aria-labelledby="pvModalTitle">
+    <div class="pv-dialog">
+      <div class="pv-dialog-bar">
+        <div class="pv-dialog-title" id="pvModalTitle">Quick View</div>
+        <div class="pv-dialog-actions">
+          <a class="pv-modal-btn" id="pvModalDownload" href="#" download>↓ Download</a>
+          <a class="pv-modal-btn" id="pvModalNewTab" href="#" target="_blank" rel="noopener noreferrer">↗ Open Full Tab</a>
+          <button class="pv-modal-btn" id="pvModalClose" type="button">✕ Close</button>
+        </div>
+      </div>
+      <iframe class="pv-frame" id="previewFrame" title="Example file quick view"></iframe>
+    </div>
+  </div>
+
   <script>
     (function () {
       const langBtns = document.querySelectorAll(".lang-btn");
@@ -3001,6 +3497,42 @@ ollama run gemma4:latest &quot;「オフライン準備完了！」とだけ答�
             : `Showing ${matches} chapter(s)/appendices matching "${searchInput.value.trim()}"`;
       }
       searchInput.addEventListener("input", runSearch);
+
+      // Quick View Modal logic
+      const pvModal = document.getElementById("previewModal");
+      const pvFrame = document.getElementById("previewFrame");
+      const pvTitle = document.getElementById("pvModalTitle");
+      const pvDownload = document.getElementById("pvModalDownload");
+      const pvNewTab = document.getElementById("pvModalNewTab");
+      const pvClose = document.getElementById("pvModalClose");
+
+      function closePreview() {
+        pvModal.classList.remove("open");
+        pvFrame.src = "about:blank";
+        document.body.style.overflow = "";
+      }
+
+      document.addEventListener("click", (e) => {
+        const trigger = e.target.closest("[data-preview]");
+        if (!trigger) return;
+        const src = trigger.getAttribute("data-preview");
+        const dl = trigger.getAttribute("data-download");
+        const title = trigger.getAttribute("data-title") || "Quick View";
+        pvTitle.textContent = title;
+        pvDownload.href = dl || "#";
+        pvNewTab.href = src || "#";
+        pvFrame.src = src;
+        pvModal.classList.add("open");
+        document.body.style.overflow = "hidden";
+      });
+
+      pvClose.addEventListener("click", closePreview);
+      pvModal.addEventListener("click", (e) => {
+        if (e.target === pvModal) closePreview();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && pvModal.classList.contains("open")) closePreview();
+      });
     })();
   </script>
 </body>
