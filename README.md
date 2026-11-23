@@ -1,4 +1,4 @@
-# Local Language Models for Ethical Research — Practical Toolkit Guide (EN / 日本語)
+# Local AI (LLMs) for Doing Ethical Research in Social Sciences — Practical Toolkit Guide (EN / 日本語)
 
 A 100% offline, privacy-first practical handbook for running local AI models (**Ollama**, **Gemma 4 / Gemma 3**, **Qwen 2.5 Coder**, **Apple Silicon MLX Whisper `turbo`**, and **Silero Neural VAD**) with **Antigravity Guardrails**, **Dual-Agent Qualitative Pipelines**, and the **Offline Bilingual Live Teleprompter**.
 

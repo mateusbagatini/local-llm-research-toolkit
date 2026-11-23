@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Local Language Models for Ethical Research — Practical Toolkit Guide (EN / 日本語)</title>
+  <title>Local AI (LLMs) for Doing Ethical Research in Social Sciences — Practical Toolkit Guide (EN / 日本語)</title>
   <meta name="description" content="100% Local AI Research Handbook & Reproducible Toolkit: Ollama, Gemma 4/3, Qwen 2.5 Coder, Apple Silicon MLX Whisper, Antigravity Guardrails, Dual-Agent Qualitative Pipelines & Offline Live Teleprompter." />
   <style>
     :root {
@@ -869,7 +869,7 @@
       <button class="icon-btn mobile-menu-btn" id="menuToggle" type="button" aria-label="Menu">☰</button>
       <div class="brand">
         <span class="brand-dot"></span>
-        <span id="brandTitle">Local LLM Research Toolkit</span>
+        <span id="brandTitle">Local AI (LLMs) for Ethical Research</span>
       </div>
     </div>
     <div class="topbar-controls">
@@ -1094,7 +1094,7 @@
         
             <header class="hero" id="en-top">
               <div class="hero-badge">Practical Research Handbook &amp; Reproducible Toolkit  •  English Edition</div>
-              <h1 class="hero-title">Local Language Models for<br>Ethical Research</h1>
+              <h1 class="hero-title">Local AI (LLMs) for Doing<br>Ethical Research in Social Sciences</h1>
               <p class="hero-sub">A complete, end-to-end practical guide to installing, securing, and running offline AI models (Whisper, Gemma 4/3, Qwen 2.5 Coder) via Ollama, Apple Silicon MLX, Antigravity Guardrails, Dual-Agent Qualitative Pipelines, and the Offline Bilingual Live Teleprompter.</p>
               
               <div class="hero-author">
@@ -2242,7 +2242,7 @@ ollama run gemma4:latest &quot;Reply with &#x27;Offline ready!&#x27; in 3 words.
         
             <header class="hero" id="ja-top">
               <div class="hero-badge">実践研究ハンドブック＆再現可能ツールキット  •  日本語版</div>
-              <h1 class="hero-title">研究倫理のための<br>ローカル言語モデル実践ガイド</h1>
+              <h1 class="hero-title">社会科学における研究倫理のための<br>ローカルAI（LLM）実践ガイド</h1>
               <p class="hero-sub">Ollama、Apple Silicon MLX、Antigravityガードレール、デュアルエージェント質的分析パイプライン、およびオフライン日英リアルタイム・テレプロンプターを用いて、機密性の高い研究データを100%オフラインで安全に処理するための導入・運用・スクリプト完全マニュアル。</p>
               
               <div class="hero-author">
@@ -3423,7 +3423,9 @@ ollama run gemma4:latest &quot;「オフライン準備完了！」とだけ答�
         langBtns.forEach((b) => b.classList.toggle("active", b.dataset.lang === currentLang));
         panes.forEach((p) => p.classList.toggle("active", p.dataset.pane === currentLang));
         brandTitle.textContent =
-          currentLang === "ja" ? "ローカルLLM研究ツールキット" : "Local LLM Research Toolkit";
+          currentLang === "ja"
+            ? "社会科学のためのローカルAI（LLM）研究ガイド"
+            : "Local AI (LLMs) for Ethical Research";
         searchInput.placeholder =
           currentLang === "ja" ? "ガイド内を検索..." : "Search guide...";
         if (updateHash && (!location.hash || location.hash === "#en" || location.hash === "#ja")) {
