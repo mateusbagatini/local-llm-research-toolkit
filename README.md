@@ -28,7 +28,7 @@ Once GitHub Pages is enabled (`Settings → Pages → Deploy from branch → mai
 **Mateus R Oliveira （陌・Machi） / オリベイラ・マチ**  
 PhD Candidate, Graduate School of Interdisciplinary Information Studies, The University of Tokyo  
 東京大学大学院 学際情報学府 博士課程  
-✉ `mateus@g.ecc.u-tokyo.ac.jp` · 🔗 https://borderlining.substack.com/
+✉ `mateus@g.ecc.u-tokyo.ac.jp`
 
 ## Privacy Notice
 This public documentation repository contains **zero confidential research data, audio recordings, transcripts, or spreadsheets**. Local machine paths have been sanitized to portable `~/` placeholders.
